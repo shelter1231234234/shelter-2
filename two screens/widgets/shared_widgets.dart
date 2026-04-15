@@ -152,7 +152,7 @@ class CreditCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 195,
+      height: 205,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(kCardRadius),
         gradient: const LinearGradient(
@@ -171,6 +171,7 @@ class CreditCardWidget extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(kCardRadius),
         child: Stack(
+          clipBehavior: Clip.hardEdge,
           children: [
             // Decorative circle top-right
             Positioned(
